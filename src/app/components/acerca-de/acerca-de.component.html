@@ -1,21 +1,26 @@
-<div class="row">
-    
-        <button type="button" class="btn btn-primary" routerLink="/editacercade/1" *ngIf="isLogged">
-           Editar persona
-        </button>
-    
-    <div class="col-12 col-sm-2 col-md-2 col-lg-2">
-        <img src={{persona.img}} alt="fotoperfil" class="img-fluid" id="fotoperfil">
-    </div>
-    <div class="col-12 col-sm-2 col-md-2 col-lg-2">
-        <p id="nombre">{{persona.nombre}} {{persona.apellido}}</p>
-        <p>full stack developer</p>
-    </div>
-    <div class="col-12 col-sm-8 col-md-8 col-lg-8">
-        <span>
-            <h1>acerca de mi</h1>
-            <p>{{persona.descripcion}}</p>
-        </span>
+<div class="card">
+    <div class="row">
+        <div class="col-lg-12">
+            <button type="button" class="btn btn-primary" routerLink="/editacercade/1" *ngIf="isLogged">
+                <i class="bi bi-pencil-square"></i>
+                Editar datos
+            </button>
+            <br *ngIf="!isLogged">
+            <br *ngIf="!isLogged">
+        </div>
+        <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+            <img id="pic" src={{persona?.img}} class="img-fluid">
+        </div>
+        <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+            <p id="name">{{persona?.nombre}} {{persona?.apellido}}</p>
+            <p>{{persona?.titulo}}</p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 descrip">
+            <span>
+                <h1>Sobre mi</h1>
+                <p>{{persona?.descripcion}}
+                </p>
+            </span>
+        </div>
     </div>
 </div>
-

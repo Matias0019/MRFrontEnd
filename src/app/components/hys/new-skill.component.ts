@@ -9,7 +9,7 @@ import { SkillService } from 'src/app/service/skill.service';
   styleUrls: ['./new-skill.component.css']
 })
 export class NewSkillComponent implements OnInit {
-  nombre: string = '';
+  nombre: string;
   porcentaje: number;
   constructor(private skillS: SkillService, private router: Router) { }
 
@@ -19,7 +19,7 @@ export class NewSkillComponent implements OnInit {
   onCreate(): void{
     const skill = new Skill(this.nombre, this.porcentaje);
     this.skillS.save(skill).subscribe(data=>{
-      alert("Skill anadida");
+      alert("Habilidad agregada");
       this.router.navigate(['']);
     }, err =>{
       alert("Fallo");

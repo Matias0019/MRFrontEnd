@@ -19,7 +19,7 @@ export class EditproyectoComponent implements OnInit {
       data =>{
         this.proyecto = data;
       }, err =>{
-        alert("Error al modificar el proyecto");
+        alert("Error al modificar (oninit)");
         this.router.navigate(['']);
       }
     )
@@ -32,16 +32,23 @@ export class EditproyectoComponent implements OnInit {
       data => {
         this.router.navigate(['']);
       }, err => {
-        alert("Error al modificar el proyecto");
+        alert("Error al modificar (update)");
         this.router.navigate(['']);
       }
     )
   }
 
   uploadImage($event:any){
-    let id = this.activatedRouter.snapshot.params['id'];
+    const id = this.activatedRouter.snapshot.params['id'];
     const name = "proyecto_" + id;
     this.imageService.uploadImage($event, name)
+  }
+
+  cancel(): void {
+
+    this.imageService.clearUrl();
+    this.router.navigate(['']);
+
   }
 
 }

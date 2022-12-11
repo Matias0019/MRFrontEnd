@@ -33,7 +33,7 @@ export class EducacionComponent implements OnInit {
         data => {
           this.cargarEducacion();
         }, err => {
-          alert("No se pudo borrar la educacion")
+          alert("No se pudo borrar")
         }
       )
     }

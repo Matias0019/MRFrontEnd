@@ -9,5 +9,5 @@ export const environment = {
     messagingSenderId: '337599256182',
   },
   production: true,
-  URL: 'http://ya depoly'
+  URL: 'https://deployspring-matias0019.koyeb.app/'
 };

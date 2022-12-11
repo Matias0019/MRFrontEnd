@@ -33,7 +33,7 @@ export class ProyectosComponent implements OnInit {
         data => {
           this.cargarProyecto();
         }, err => {
-          alert("No se pudo borrar el proyecto")
+          alert("No se pudo borrar")
         }
       )
     }

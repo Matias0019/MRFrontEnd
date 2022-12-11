@@ -1,10 +1,20 @@
-.row{
-    background-color: #00001a;
-    color: #fff;
+.card{
+    margin: 10px;
+    padding: 5px;
 }
 
-.circulo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.row{
+    margin: 5px;
+    padding-right: 15px
+}
+h1,h2,h3{
+    display: inline;
+}
+button{
+    margin: 5px;
+}
+table{
+    margin-top: 10px;
+    padding: 5px;
+    
 }

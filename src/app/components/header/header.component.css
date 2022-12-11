@@ -1,8 +1,13 @@
-div{
-    background-color: blue;
+#top{
+    background-color: #171717;
 }
 
+
+.card{
+    margin: 5px;
+    
+}
 app-social{
-    float: right;
-    margin-top: 25px;
+    float:right;
+    margin-top: 2px;
 }

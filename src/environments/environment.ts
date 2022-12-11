@@ -14,8 +14,8 @@ export const environment = {
   },
   production: false,
 
-  URL: 'http://localhost:8080/',
-  //URL: 'http://otraurl'
+  //URL: 'http://localhost:8080/',
+  URL: 'https://deployspring-matias0019.koyeb.app/'
 };
 
 /*

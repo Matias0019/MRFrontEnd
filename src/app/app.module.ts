@@ -11,7 +11,6 @@ import { ExperienciaComponent } from './components/experiencia/experiencia.compo
 import { EducacionComponent } from './components/educacion/educacion.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { FormsModule } from '@angular/forms';
-import { SkillsComponent } from './components/skills/skills.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClient, HttpClientModule} from '@angular/common/http';
@@ -41,7 +40,6 @@ import { EditproyectoComponent } from './components/proyectos/editproyecto.compo
     AcercaDeComponent,
     ExperienciaComponent,
     EducacionComponent,
-    SkillsComponent,
     ProyectosComponent,
     FooterComponent,
     HomeComponent,

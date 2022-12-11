@@ -1,7 +1,9 @@
-<div class="container" *ngIf="proyecto">
+<div class="card" *ngIf="proyecto">
     <div class="row">
+        <h4>Editar proyecto</h4>
         <div>
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+            <div>
                 <div class="form-group">
                     <label for="nombre">Nombre del proyecto</label>
                     <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="proyecto.nombre" required>
@@ -11,18 +13,26 @@
                     <input type="text" class="form-control" id="linkproyecto" name="linkproyecto" [(ngModel)]="proyecto.linkproyecto" required>
                 </div>
                 <div class="form-group">
-                    <label for="descripcion">Descripcion</label>
+                    <label for="descripcion">Descripción</label>
                     <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="proyecto.descripcion" required>
                 </div>
                 <div class="form-group">
                     <label for="img">Imagen</label>
                     <input type="file" class="form-control" id="img" name="img" [(ngModel)]="proyecto.img" (change)="uploadImage($event)" accept=".jpg, .jpeg, .png, .webp">
                 </div>
-                <div class="imagen"><img [src]="imageService.url" width="200px"></div>
-                <br>
-                <button class="btn btn-primary">Actualizar proyecto</button>
+                <div class="img">
+                    <img [src]="imageService.urlImg" width="150px">
+                </div>
+                <div>
+                    <button class="btn btn-success">
+                        Actualizar
+                    </button>
+                    <button class="btn btn-light" (click)="cancel()">
+                        Cancelar
+                    </button>
+                </div>
+            </div>
             </form>
         </div>
     </div>
 </div>
-

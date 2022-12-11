@@ -1,3 +1,31 @@
 .row{
     margin: 0!important;
 }
+div {
+    background-color: #1c1c1c!important;
+}
+body{
+    background-color: #171717!important;
+    color: whitesmoke!important; 
+}
+
+strong{
+    color: whitesmoke!important;
+}
+
+* {
+    scrollbar-width: 8px;
+    scrollbar-color: #1c1c1c;
+  }
+
+  *::-webkit-scrollbar {
+    width: 8px;
+    overflow-y: scroll;
+    background: #171717;
+    
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background: #1c1c1c;
+    border-radius: 10px;
+  }

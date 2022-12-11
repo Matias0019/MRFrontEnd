@@ -2,27 +2,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-right: 0.5px;
 }
-#logoAP{
-    width: 150px;
-}
-
-.redes svg, .redes button{
-    margin-left: 5px;
+.socialmedia{
+    margin-right: 0.5px;
 }
 
 .btn{
     border-width: medium;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+#logoapp{
+    width: 150px ;
+
+}
+img{
+    width: 40px;
 }
 
-@media (max-width: 575px){
-    .container{
-        flex-direction: column;
-        margin-bottom: 10px;
-    }
-    .redes{
-        display: flex;
-        align-items: center;
-
-    }
+#iconos{
+    font-size: 40px;
+    color: #fff;
+    margin-left: 10px;
 }

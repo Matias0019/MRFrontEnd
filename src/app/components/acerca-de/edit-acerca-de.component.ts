@@ -19,20 +19,21 @@ export class EditAcercaDeComponent implements OnInit {
       data =>{
         this.persona = data;
       }, err =>{
-        alert("Error al modificar la persona");
+        alert("Error al modificar(init)");
         this.router.navigate(['']);
       }
     )
+    this.imageService.clearUrl();
   }
 
   onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
-    this.persona.img = this.imageService.url
+    this.persona.img = this.imageService.urlImg
     this.personaService.update(id, this.persona).subscribe(
       data => {
         this.router.navigate(['']);
       }, err => {
-        alert("Error al modificar la persona");
+        alert("Error al modificar (update)");
         this.router.navigate(['']);
       }
     )
@@ -40,8 +41,15 @@ export class EditAcercaDeComponent implements OnInit {
 
   uploadImage($event:any){
     const id = this.activatedRouter.snapshot.params['id'];
-    const name = "perfil_" + id;
+    const name = "perfil-" + id;
     this.imageService.uploadImage($event, name)
+  }
+
+  cancel(): void {
+
+    this.imageService.clearUrl();
+    this.router.navigate(['']);
+
   }
 
 }

@@ -15,27 +15,37 @@ export class NewproyectoComponent implements OnInit {
   descripcion: string = '';
   img: string = '';
 
-  constructor(private proyectoS: ProyectoService, private activatedRouter: ActivatedRoute, private router:Router, public imageService:ImageService) { }
+  constructor(private proyectoS: ProyectoService, private router:Router, public imageService:ImageService) { }
 
   ngOnInit(): void {
+    this.imageService.clearUrl();
   }
 
   onCreate(): void{
+    this.img=this.imageService.urlImg;
     const proyecto = new Proyecto(this.nombre, this.linkproyecto, this.descripcion, this.img);
     this.proyectoS.save(proyecto).subscribe(data=>{
-      alert("Proyecto anadido");
+      alert("Proyecto agregado");
       this.router.navigate(['']);
     }, err =>{
       alert("Fallo");
       this.router.navigate(['']);
     }
     )
+    this.imageService.clearUrl();
   }
 
   uploadImage($event:any){
-    let id = this.activatedRouter.snapshot.params['id'];
-    const name = "proyecto_" + id;
+    
+    const name = "proyect-" + this.nombre;
     this.imageService.uploadImage($event, name)
+  }
+
+  cancel(): void {
+
+    this.imageService.clearUrl();
+    this.router.navigate(['']);
+
   }
 
 }
